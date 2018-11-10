@@ -1,0 +1,112 @@
+---
+title: "Food Uniqueness and Quality"
+author: "Joshua Derenski"
+date: "11/8/2018"
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introduction/Business Problem
+
+- Uniqueness and quality of food can vary geographically
+    - cities have a plethora of unique tastes
+    - rural areas often have fewer options
+    
+- Should be taken into consideration by chefs and restaurateurs
+    - Should a chef open a restaurant in a city, or a small town
+    - Could there be demand for my food here
+    
+    
+## Data
+
+- Demographic data on all counties in California
+    - Median income, population density, voter registration data 
+
+- Restaurant data from the county seat of each county
+    - Price, rating, type, location
+
+- New metric: Uniqueness
+    - Measures how unique a given county seat's cuisine is, relative to other county seats
+
+
+## Exploration/Methodology
+
+- Look at how the variables of interest vary by county
+
+- Use linear regression to quantify relationships between average rating, and demographic factors
+
+- Use economic and demographic theory to put the data and trends into context
+
+
+## Results: Geographic Trends
+
+\begin{figure}[!tbp]
+  \centering
+  \begin{minipage}[b]{1\textwidth}
+    \includegraphics[width=.5\textwidth,height=.7\textheight]{cal_pop_dens}
+    \includegraphics[width=.5\textwidth, height=.7\textheight]{cal_ave_rate}
+  \end{minipage}
+
+\end{figure}
+
+
+
+
+## Results: Average Rating
+
+\begin{figure}[!tbp]
+  \centering
+  \begin{minipage}[b]{1\textwidth}
+    \includegraphics[width=.5\textwidth,height=.7\textheight]{ave_rating_plot}
+    \includegraphics[width=.5\textwidth, height=.7\textheight]{ave_rating_ols}
+  \end{minipage}
+
+\end{figure}
+
+## Results: Uniqueness
+
+
+\begin{figure}[!tbp]
+  \centering
+  \begin{minipage}[b]{1\textwidth}
+    \includegraphics[width=.5\textwidth,height=.7\textheight]{uniqueness_plot}
+    \includegraphics[width=.5\textwidth, height=.7\textheight]{uniqueness_ols}
+  \end{minipage}
+
+\end{figure}
+
+## Discussion
+
+- Demographics related to rating and uniqueness
+    - Urban areas have higher average rating and uniqueness scores
+    - The above is also true for high income areas
+    
+- These relationships make economic sense
+    - Chefs and restaurateurs serve high quality cuisine to customers who are likely to purchase their food 
+    - Urban areas are also going to have markets where there is demand for unique cuisines
+    
+- They also make demographic sense
+    - Urban areas tend to me more ethnically diverse
+    - Leads to more unique food choices, relative to rural areas
+    
+## Conclusion
+
+- Because these results are based in economics and demography, they generalize to places outside California
+    - For example, we'd expect New York to have high quality, unique tastes (and it does)
+
+- Recommendation: Chefs and restaurateurs should look at the demographics and economic state of the market they are considering entrance to, and make decisions based off of that
+    - Also look at similar restaurants in that area, if there are any 
+
+
+
+
+
+
+
+    
+    
+    
+    
